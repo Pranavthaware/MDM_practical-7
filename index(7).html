@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive FAQ</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-r from-rose-500 via-pink-500 to-fuchsia-600 flex items-center justify-center">
+
+    <div class="bg-white p-8 rounded-xl shadow-lg w-96">
+
+        <h2 class="text-2xl font-bold text-center text-rose-600 mb-6">
+            Student Help Portal
+        </h2>
+
+        <p class="text-center mb-5 text-gray-600">
+            Frequently Asked Questions
+        </p>
+
+        <!-- FAQ 1 -->
+        <div class="mb-3">
+            <button class="question w-full text-left p-3 bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-500 text-white rounded">
+                How can I register for courses?
+            </button>
+
+            <p class="answer hidden p-3 bg-fuchsia-50">
+                You can register for courses through the student portal.
+            </p>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="mb-3">
+            <button class="question w-full text-left p-3 bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-500 text-white rounded">
+                How can I check my attendance?
+            </button>
+
+            <p class="answer hidden p-3 bg-fuchsia-50">
+                You can check your attendance details by logging into the student portal.
+            </p>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="mb-3">
+            <button class="question w-full text-left p-3 bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-500 text-white rounded">
+                Where can I find the college notices?
+            </button>
+
+            <p class="answer hidden p-3 bg-fuchsia-50">
+                You can find the college notices on the college website.
+            </p>
+        </div>
+        <!-- FAQ 4 -->
+        <div class="mb-3">
+            <button class="question w-full text-left p-3 bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-500 text-white rounded">
+                How can I access the library resources?
+            </button>
+
+            <p class="answer hidden p-3 bg-fuchsia-50">
+                You can access the library resources through the online apps or by visiting the library in person.
+            </p>
+        </div>
+        <!-- FAQ 5 -->
+        <div class="mb-3">
+            <button class="question w-full text-left p-3 bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-500 text-white rounded">
+                How can I contact the administration for queries?
+            </button>
+
+            <p class="answer hidden p-3 bg-fuchsia-50">
+                You can contact the administration through the college website or by visiting their office in person.
+            </p>
+        </div>
+        <!-- FAQ 6 -->
+        <div class="mb-3">
+            <button class="question w-full text-left p-3 bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-500 text-white rounded">
+                How can I verify my exam results?
+            </button>
+
+            <p class="answer hidden p-3 bg-fuchsia-50">
+                You can verify your exam results through the student portal or by contacting the administration.
+            </p>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        // Get all questions
+        let questions = document.querySelectorAll(".question");
+
+        // Add click event to each question
+        questions.forEach(function(question) {
+
+            question.addEventListener("click", function() {
+
+                // Get the answer
+                let answer = question.nextElementSibling;
+
+                // Show / Hide answer
+                answer.classList.toggle("hidden");
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
